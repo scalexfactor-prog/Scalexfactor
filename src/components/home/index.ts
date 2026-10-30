@@ -1,0 +1,10 @@
+export { Hero } from './Hero';
+export { Capabilities } from './Capabilities';
+export { ProblemSolution } from './ProblemSolution';
+export { WhyChoose } from './WhyChoose';
+export { RoiMetrics } from './RoiMetrics';
+export { DeliveryProcess } from './DeliveryProcess';
+export { Industries } from './Industries';
+export { Testimonials } from './Testimonials';
+export { Faq } from './Faq';
+export { FinalCta } from './FinalCta';

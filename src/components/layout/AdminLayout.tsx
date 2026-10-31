@@ -3,11 +3,11 @@ import { AdminSidebar, AdminTopbar } from '@/components/admin';
 
 export function AdminLayout() {
   return (
-    <div className="bg-surface font-body-md text-on-surface antialiased min-h-screen">
+    <div className="min-h-screen bg-[#070b11] text-slate-100 antialiased">
       <AdminSidebar />
       <div className="pl-72">
         <AdminTopbar />
-        <main className="w-full pt-16 px-space-md pb-space-lg bg-surface min-h-screen">
+        <main className="min-h-screen w-full bg-[#070b11] px-space-md pb-space-lg pt-16">
           <Outlet />
         </main>
       </div>

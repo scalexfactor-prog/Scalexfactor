@@ -9,78 +9,92 @@ export function SiteHeader() {
   const current = pathname + hash;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-      <div className="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between gap-gutter">
-        <Link to="/" className="flex items-center gap-space-sm" onClick={() => setMenuOpen(false)}>
-          <img src={SITE.logoUrl} alt="Scalex Factor Brand Logo" className="h-8 w-auto object-contain" />
-          <span className="font-headline-sm text-headline-sm text-on-surface tracking-tight">{SITE.name}</span>
-        </Link>
+    <div className="fixed left-0 right-0 top-0 z-50">
+      <div className="bg-gradient-to-r from-indigo-700 via-indigo-600 to-cyan-500 text-white text-center text-[11px] sm:text-xs font-semibold py-2 px-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-center gap-2">
+          <span className="rounded-full bg-white/20 px-2 py-0.5 uppercase tracking-[0.2em] font-extrabold">Q4 Growth Sprint</span>
+          <span className="hidden sm:inline">Claim 1 of 5 free conversion &amp; SEO velocity audits</span>
+          <Link to="/#audit-form" className="underline font-bold hover:text-slate-200">Claim Now →</Link>
+        </div>
+      </div>
 
-        <nav className="hidden xl:flex items-center gap-space-lg" aria-label="Primary">
-          {NAV_ITEMS.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className={`font-label-md text-label-md transition-colors px-space-sm py-space-xs ${
-                current === item.to
-                  ? 'bg-secondary-container text-on-secondary-fixed font-bold rounded-lg'
-                  : 'text-on-surface-variant hover:text-on-surface'
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-space-md">
-          <div className="hidden md:flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-lg">
-            <Icon name="chat" className="text-tertiary text-[20px]" />
-            <div className="flex flex-col text-left">
-              <span className="font-label-sm text-label-sm text-on-surface-variant">Connect Direct</span>
-              <a href={SITE.phoneHref} className="font-label-md text-label-md text-on-surface hover:text-primary transition-colors">
-                {SITE.phone}
-              </a>
+      <header className="glass-nav border-b backdrop-blur-xl">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+          <Link to="/" className="flex items-center gap-2.5" onClick={() => setMenuOpen(false)}>
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-400 shadow-lg shadow-indigo-500/30">
+              <Icon name="bolt" className="text-lg text-white" />
             </div>
-          </div>
-          <Link
-            to="/#contact"
-            className="hidden sm:inline-flex bg-primary-container text-on-primary font-label-md text-label-md px-space-lg py-space-sm rounded-lg hover:bg-primary transition-colors shadow-sm items-center justify-center"
-          >
-            Get a Free Consultation
+            <div className="flex flex-col leading-none">
+              <span className="text-xl font-extrabold tracking-tight text-white">
+                SCALEX<span className="text-cyan-400">FACTOR</span>
+              </span>
+              <span className="-mt-0.5 text-[9px] font-semibold uppercase tracking-[0.3em] text-slate-400">Growth &amp; Tech Agency</span>
+            </div>
           </Link>
+
+          <nav className="hidden items-center gap-8 text-sm font-medium text-slate-300 xl:flex" aria-label="Primary">
+            {NAV_ITEMS.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className={`transition-colors hover:text-white ${
+                  current === item.to ? 'rounded-lg bg-slate-800/80 px-3 py-2 text-white' : ''
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden items-center gap-4 md:flex">
+            <a href={SITE.phoneHref} className="text-xs font-bold uppercase tracking-[0.2em] text-slate-300 transition-colors hover:text-white">
+              Client Login
+            </a>
+            <Link
+              to="/#audit-form"
+              className="relative overflow-hidden rounded-full p-[1px] focus:outline-none"
+            >
+              <span className="absolute inset-0 animate-pulse-slow rounded-full bg-gradient-to-r from-indigo-500 via-cyan-400 to-indigo-500" />
+              <span className="relative inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-white transition-colors hover:bg-slate-900">
+                <span>Book Strategy Call</span>
+                <Icon name="arrow_forward" className="text-[14px] text-cyan-400" />
+              </span>
+            </Link>
+          </div>
+
           <button
             type="button"
-            className="xl:hidden p-space-xs rounded-lg text-on-surface hover:bg-surface-container-low"
+            className="rounded-lg p-2 text-slate-300 hover:bg-slate-800/80 hover:text-white xl:hidden"
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((o) => !o)}
           >
-            <Icon name={menuOpen ? 'close' : 'menu'} />
+            <Icon name={menuOpen ? 'close' : 'menu'} className="text-[20px]" />
           </button>
         </div>
-      </div>
 
-      {menuOpen && (
-        <nav className="xl:hidden bg-surface-container-lowest px-margin-mobile pb-space-md flex flex-col gap-space-xs" aria-label="Mobile">
-          {NAV_ITEMS.map((item) => (
+        {menuOpen && (
+          <nav className="border-t border-slate-800 bg-[#070b11] px-4 pb-6 pt-4 xl:hidden" aria-label="Mobile">
+            {NAV_ITEMS.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                onClick={() => setMenuOpen(false)}
+                className="block rounded-lg px-3 py-3 text-sm font-medium text-slate-300 hover:bg-slate-900 hover:text-white"
+              >
+                {item.label}
+              </Link>
+            ))}
             <Link
-              key={item.to}
-              to={item.to}
+              to="/#audit-form"
               onClick={() => setMenuOpen(false)}
-              className="px-space-sm py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low"
+              className="mt-3 block w-full rounded-lg bg-gradient-to-r from-indigo-500 to-cyan-400 px-4 py-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-white"
             >
-              {item.label}
+              Book Free Strategy Call
             </Link>
-          ))}
-          <Link
-            to="/#contact"
-            onClick={() => setMenuOpen(false)}
-            className="mt-space-xs bg-primary-container text-on-primary font-label-md text-label-md px-space-lg py-space-sm rounded-lg text-center"
-          >
-            Get a Free Consultation
-          </Link>
-        </nav>
-      )}
-    </header>
+          </nav>
+        )}
+      </header>
+    </div>
   );
 }

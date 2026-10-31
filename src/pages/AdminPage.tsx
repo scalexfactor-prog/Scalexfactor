@@ -2,7 +2,7 @@ import { AdminPageHeader, AdminStats, LifecycleFunnel, LeadWorkspace } from '@/c
 
 export default function AdminPage() {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex w-full flex-col bg-[#070b11] text-slate-100">
       <AdminPageHeader />
       <AdminStats />
       <LifecycleFunnel />

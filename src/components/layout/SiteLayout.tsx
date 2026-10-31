@@ -8,7 +8,7 @@ export function SiteLayout() {
     <>
       <ScrollManager />
       <SiteHeader />
-      <main className="w-full pt-20 bg-surface">
+      <main className="w-full bg-[#070b11] pt-20">
         <Outlet />
       </main>
       <SiteFooter />

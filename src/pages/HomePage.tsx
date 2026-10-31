@@ -170,9 +170,9 @@ function HomePage() {
   );
 
   const formatCurrency = (value: number) =>
-    new Intl.NumberFormat('en-US', {
+    new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'INR',
       maximumFractionDigits: 0,
     }).format(value);
 
@@ -342,7 +342,7 @@ function HomePage() {
       <section id="calculator" className="relative border-y border-slate-800 bg-slate-900 py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <div className="mb-10 text-center">
-            <span className="text-xs font-extrabold uppercase tracking-[0.35em] text-cyan-400">Growth Forecaster</span>
+            <span className="text-xs font-extrabold uppercase tracking-[0.35em] text-cyan-400">India Growth Forecaster</span>
             <h2 className="mt-2 text-3xl font-extrabold text-white">Calculate Your Revenue Expansion Potential</h2>
             <p className="mt-2 text-sm text-slate-400">Adjust your current traffic and target metrics to calculate monthly upside with Scalex Factor.</p>
           </div>
@@ -353,7 +353,7 @@ function HomePage() {
                 <div>
                   <div className="mb-2 flex justify-between text-xs font-semibold">
                     <span className="text-slate-300">Monthly Website Visitors</span>
-                    <span className="font-mono text-cyan-400">{traffic.toLocaleString()}</span>
+                    <span className="font-mono text-cyan-400">{traffic.toLocaleString('en-IN')}</span>
                   </div>
                   <input
                     type="range"
@@ -384,7 +384,7 @@ function HomePage() {
 
                 <div>
                   <div className="mb-2 flex justify-between text-xs font-semibold">
-                    <span className="text-slate-300">Average Customer Order/Deal Value</span>
+                    <span className="text-slate-300">Average Customer Order/Deal Value (INR)</span>
                     <span className="font-mono text-cyan-400">{formatCurrency(orderValue)}</span>
                   </div>
                   <input
@@ -405,7 +405,7 @@ function HomePage() {
               </div>
 
               <div className="overflow-hidden rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-900/30 to-cyan-600/10 p-8 text-center">
-                <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-slate-400">Estimated Additional Monthly Pipeline</span>
+                <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-slate-400">Estimated Additional Monthly Pipeline (INR)</span>
                 <div className="mt-3 font-mono text-4xl font-black text-white sm:text-5xl">{formatCurrency(projectedRevenue)}</div>
                 <p className="mt-2 flex items-center justify-center gap-1 text-xs font-medium text-emerald-400">
                   <Icon name="check_circle" className="text-[14px]" />

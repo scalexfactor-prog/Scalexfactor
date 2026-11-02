@@ -20,16 +20,12 @@ export function SiteHeader() {
 
       <header className="glass-nav border-b backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-          <Link to="/" className="flex items-center gap-2.5" onClick={() => setMenuOpen(false)}>
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-400 shadow-lg shadow-indigo-500/30">
-              <Icon name="bolt" className="text-lg text-white" />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className="text-xl font-extrabold tracking-tight text-white">
-                SCALEX<span className="text-cyan-400">FACTOR</span>
-              </span>
-              <span className="-mt-0.5 text-[9px] font-semibold uppercase tracking-[0.3em] text-slate-400">Growth &amp; Tech Agency</span>
-            </div>
+          <Link to="/" className="flex shrink-0 items-center" onClick={() => setMenuOpen(false)}>
+            <img
+              src="/scalex-factor-logo.png"
+              alt="Scalex Factor — Growth & Tech Agency"
+              className="h-[4.5rem] w-[4.5rem] object-contain"
+            />
           </Link>
 
           <nav className="hidden items-center gap-8 text-sm font-medium text-slate-300 xl:flex" aria-label="Primary">

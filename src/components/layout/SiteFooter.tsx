@@ -50,9 +50,9 @@ export function SiteFooter() {
           <div>
             <h5 className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white">Contact Direct</h5>
             <ul className="space-y-2 text-xs text-slate-400">
-              <li className="flex items-center gap-2"><Icon name="mail" className="text-[14px] text-cyan-400" /> hello@scalexfactor.com</li>
-              <li className="flex items-center gap-2"><Icon name="call" className="text-[14px] text-cyan-400" /> +1 (800) 482-9210</li>
-              <li className="flex items-center gap-2"><Icon name="location_on" className="text-[14px] text-cyan-400" /> San Francisco &amp; London</li>
+              <li className="flex items-center gap-2"><Icon name="mail" className="text-[14px] text-cyan-400" /> scalexfactor@gmail.com</li>
+              <li className="flex items-center gap-2"><Icon name="call" className="text-[14px] text-cyan-400" /> +91 8087885433</li>
+              <li className="flex items-center gap-2"><Icon name="location_on" className="text-[14px] text-cyan-400" /> Nagpur &amp; India</li>
             </ul>
           </div>
         </div>

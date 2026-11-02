@@ -14,8 +14,20 @@ export function CaseExplorer() {
     const list = CASE_STUDIES.filter(
       (c) => (filter === 'all' || c.categories.includes(filter)) && (!q || c.searchText.includes(q)),
     );
-    if (sort === 'impact') return [...list].sort((a, b) => b.impact - a.impact);
-    if (sort === 'speed') return [...list].sort((a, b) => a.lcp - b.lcp);
+    if (sort === 'impact') {
+      return [...list].sort((a, b) => {
+        if (a.impact === undefined) return b.impact === undefined ? 0 : 1;
+        if (b.impact === undefined) return -1;
+        return b.impact - a.impact;
+      });
+    }
+    if (sort === 'speed') {
+      return [...list].sort((a, b) => {
+        if (a.lcp === undefined) return b.lcp === undefined ? 0 : 1;
+        if (b.lcp === undefined) return -1;
+        return a.lcp - b.lcp;
+      });
+    }
     return list;
   }, [filter, query, sort]);
 
@@ -78,11 +90,11 @@ export function CaseExplorer() {
               Architectural Dossiers
             </span>
             <h2 className="font-headline-md text-headline-md text-on-surface tracking-tight mt-1">
-              Featured Production Case Studies
+              Case Studies &amp; Company Profiles
             </h2>
           </div>
           <span className="hidden sm:inline-block font-body-sm text-body-sm text-on-surface-variant">
-            Displaying verified client architectures
+            Company profiles are based on publicly available information.
           </span>
         </div>
         <div className="space-y-space-xl">

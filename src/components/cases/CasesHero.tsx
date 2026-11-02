@@ -10,11 +10,11 @@ export function CasesHero() {
     <div className="flex flex-wrap items-center gap-space-sm">
     <span className="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm tracking-wide uppercase font-semibold">
     <Icon name="verified" className="text-[15px] text-primary"/>
-              PROVEN CLIENT IMPACT &amp; TECHNICAL EXCELLENCE
+              CASE STUDIES &amp; COMPANY PROFILES
             </span>
     <span className="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold shadow-sm">
     <span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
-              100% Client Attribution Verified
+              Company profiles sourced from official websites
             </span>
     </div>
     

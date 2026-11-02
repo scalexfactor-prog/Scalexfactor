@@ -5,15 +5,16 @@ import { MedicareHealthGlobalNetworkCard } from '@/components/cases/cards/Medica
 import { AuracraftLuxuryECommerceCard } from '@/components/cases/cards/AuracraftLuxuryECommerceCard';
 import { HyperscaleAiDeveloperCloudCard } from '@/components/cases/cards/HyperscaleAiDeveloperCloudCard';
 import { VanguardCorporateAdvisoryCard } from '@/components/cases/cards/VanguardCorporateAdvisoryCard';
+import { BajajLifeCareProfileCard, MyGetWellStoreProfileCard } from '@/components/cases/cards/HealthcareCompanyProfileCard';
 
 export interface CaseStudyMeta {
   id: string;
   title: string;
   categories: string[];
   /** Impact score used for "Highest Impact" sorting. */
-  impact: number;
+  impact?: number;
   /** LCP in seconds used for "Performance" sorting (lower is faster). */
-  lcp: number;
+  lcp?: number;
   searchText: string;
   Card: ComponentType;
 }
@@ -25,6 +26,8 @@ export const CASE_STUDIES: CaseStudyMeta[] = [
   { id: "auracraft-luxury-e-commerce", title: "AuraCraft Luxury E-Commerce", categories: ["ecommerce", "web-apps"], impact: 3.4, lcp: 1.1, searchText: " omnichannel high-ticket retail headless architecture paris \u2022 dubai auracraft luxury e-commerce ultra-high performance headless storefront integrating shopify plus, sub-second global checkout, multi-currency routing, and instant dynamic catalog filtering. report_problem core challenge sluggish monolithic magento store with severe checkout drop-offs (68%), regular crash events during flash-sale peaks, and zero multi-currency flexibility. check_circle engineered solution headless shopify plus integration with next.js edge storefront, stripe global rails, edge geo-currency routing, and instant algolia catalog indexing. stack: shopify plus next.js edge stripe api tailwind algolia read full architecture case study arrow_forward headless commerce audits auracraft.luxury/checkout/edge 1.1s total flow shopping_bag mobile velocity +340% mobile gross revenue arrows_outward checkout time 1.1s average completed flow signal_cellular_alt peak stability 0% flash-sale peak downtime trending_up aov impact +74% organic basket size ", Card: AuracraftLuxuryECommerceCard },
   { id: "hyperscale-ai-developer-cloud", title: "HyperScale AI Developer Cloud", categories: ["fintech-saas", "seo-growth", "web-apps"], impact: 4.2, lcp: 0.68, searchText: " developer tooling / infrastructure 12,000+ programmatic docs austin \u2022 berlin hyperscale ai developer cloud high-density technical documentation engine, real-time code playground sandboxes, and programmatic developer search architecture built to scale to millions of monthly engineering queries. report_problem core challenge fragmented api documentation causing 42% sign-up drop-offs; near-zero search engine indexation for long-tail sdk queries and api method calls. check_circle engineered solution algolia-powered interactive documentation hub, mdx server components, automated code playground sandboxes, and a programmatic technical encyclopedia. stack: mdx next.js tailwind rust backend algolia read full architecture case study arrow_forward developer platform services hyperscale.cloud/docs/api/v2 99.99% docs sla group_add signups +420% organic dev signups library_books programmatic index 12,000+ indexed technical docs cloud_done availability 99.99% zero downtime migration insights search traffic 2.8m monthly technical visits ", Card: HyperscaleAiDeveloperCloudCard },
   { id: "vanguard-corporate-advisory", title: "Vanguard Corporate Advisory", categories: ["fintech-saas", "web-apps"], impact: 1.9, lcp: 0.75, searchText: " professional legal & financial services fortune 500 portal mumbai \u2022 dubai vanguard corporate advisory institutional web infrastructure engineered to project absolute authority for high-stakes m&a advisory, featuring secure gated executive research vaults and compliant lead triage. report_problem core challenge outdated corporate presence failing to communicate gravitas to fortune 500 decision-makers and high-net-worth clients, leading to missed rfp pipelines. check_circle engineered solution minimalist high-contrast institutional web presence, gated executive briefing downloads, secure multi-tenant lead routing, and hubspot enterprise synchronization. stack: next.js tailwind hubspot enterprise api postgresql read full architecture case study arrow_forward institutional consulting vanguardadvisory.com/executive-brief 98/100 a11y business_center c-suite rfps +190% qualified inbound rfps accessibility accessibility 98/100 desktop a11y compliance hourglass_top engagement 4.2x average time-on-site account_balance deal flow $31m+ direct mandate pipeline ", Card: VanguardCorporateAdvisoryCard },
+  { id: 'mygetwellstore-profile', title: 'MyGetWellStore', categories: ['healthcare', 'ecommerce'], searchText: 'mygetwellstore healthcare online store ecommerce medical equipment health monitoring devices body support mobility aids home care wellness products pan india delivery company profile mygetwellstore.com', Card: MyGetWellStoreProfileCard },
+  { id: 'bajaj-life-care-profile', title: 'Bajaj Life Care', categories: ['healthcare'], searchText: 'bajaj life care bajajlifecare.com healthcare medical equipment manufacturer exporter supplier flow meters medical oxygen cylinders anaesthesia equipment established 2002 company profile', Card: BajajLifeCareProfileCard },
 ];
 
 export interface CaseFilter {
@@ -56,7 +59,7 @@ export const CASE_FILTERS: CaseFilter[] = [
   },
   {
     "id": "healthcare",
-    "label": "Healthcare (HIPAA)"
+    "label": "Healthcare & Medical Equipment"
   },
   {
     "id": "logistics",

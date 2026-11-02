@@ -43,9 +43,9 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-4 md:flex">
-            <a href={SITE.phoneHref} className="text-xs font-bold uppercase tracking-[0.2em] text-slate-300 transition-colors hover:text-white">
+            {/* <a href={SITE.phoneHref} className="text-xs font-bold uppercase tracking-[0.2em] text-slate-300 transition-colors hover:text-white">
               Client Login
-            </a>
+            </a> */}
             <Link
               to="/#audit-form"
               className="relative overflow-hidden rounded-full p-[1px] focus:outline-none"

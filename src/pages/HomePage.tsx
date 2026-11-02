@@ -1,6 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '@/components/ui/Icon';
+import { SITE } from '@/data/site';
 
 const serviceCards = [
   {
@@ -46,7 +47,7 @@ const serviceCards = [
   {
     icon: 'memory',
     tone: 'emerald',
-    title: 'MarTech & AI Automation',
+    title: 'AI Automation',
     description:
       'Automate lead qualification, CRM synching, client onboarding, and automated email nurturing using modern AI integrations and webhooks.',
     bullets: ['HubSpot, Salesforce & Klaviyo Workflows', 'Custom Lead Scoring Models', 'Automated Reporting Dashboards'],
@@ -163,6 +164,26 @@ function HomePage() {
   const [conversionRate, setConversionRate] = useState(2.3);
   const [orderValue, setOrderValue] = useState(1200);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const handleAuditSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const fullName = String(formData.get('fullName') ?? '').trim();
+    const workEmail = String(formData.get('workEmail') ?? '').trim();
+    const company = String(formData.get('company') ?? '').trim();
+    const monthlyBudget = String(formData.get('monthlyBudget') ?? '').trim();
+    const objective = String(formData.get('objective') ?? '').trim();
+    const details = [
+      `Name: ${fullName}`,
+      `Work email: ${workEmail}`,
+      company ? `Company: ${company}` : null,
+      `Monthly budget: ${monthlyBudget}`,
+      objective ? `Primary objective: ${objective}` : null,
+    ].filter((detail): detail is string => detail !== null);
+    const message = `Hi, I'd like to request a growth audit.\n\n${details.join('\n')}`;
+
+    window.location.href = `${SITE.whatsappHref}?text=${encodeURIComponent(message)}`;
+  };
 
   const projectedRevenue = useMemo(
     () => traffic * (conversionRate / 100) * orderValue,
@@ -553,37 +574,37 @@ function HomePage() {
                 <h3 className="mb-2 text-xl font-bold text-white">Request Your Growth Engine Audit</h3>
                 <p className="mb-6 text-xs text-slate-400">Fill in your brand details below to receive your actionable audit report.</p>
 
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={handleAuditSubmit}>
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
                       <label className="mb-1 block text-xs font-semibold text-slate-300">Full Name *</label>
-                      <input type="text" required placeholder="Alex Vance" className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none" />
+                      <input type="text" name="fullName" required placeholder="Alex Vance" className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none" />
                     </div>
                     <div>
                       <label className="mb-1 block text-xs font-semibold text-slate-300">Work Email *</label>
-                      <input type="email" required placeholder="alex@company.com" className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none" />
+                      <input type="email" name="workEmail" required placeholder="alex@company.com" className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
                       <label className="mb-1 block text-xs font-semibold text-slate-300">Company</label>
-                      <input type="text" placeholder="Northstar Labs" className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none" />
+                      <input type="text" name="company" placeholder="Northstar Labs" className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none" />
                     </div>
                     <div>
                       <label className="mb-1 block text-xs font-semibold text-slate-300">Monthly Budget</label>
-                      <select className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white focus:border-indigo-500 focus:outline-none">
-                        <option>$5k - $15k</option>
-                        <option>$15k - $40k</option>
-                        <option>$40k - $100k</option>
-                        <option>$100k+</option>
+                      <select name="monthlyBudget" className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white focus:border-indigo-500 focus:outline-none">
+                        <option>₹5k - ₹15k</option>
+                        <option>₹15k - ₹40k</option>
+                        <option>₹40k - ₹100k</option>
+                        <option>₹100k+</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
                     <label className="mb-1 block text-xs font-semibold text-slate-300">Primary Objective</label>
-                    <textarea rows={4} placeholder="Tell us where your funnel, SEO, or brand is plateauing." className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none" />
+                    <textarea name="objective" rows={4} placeholder="Tell us where your funnel, SEO, or brand is plateauing." className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none" />
                   </div>
 
                   <button type="submit" className="gradient-accent flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4 text-sm font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-indigo-500/20 transition hover:opacity-95">

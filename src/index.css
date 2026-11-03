@@ -129,6 +129,12 @@
   color: #fff !important;
 }
 
+.public-site [class*="bg-indigo-"].text-white,
+.public-site [class*="bg-primary"].text-white,
+.public-site [class*="bg-cyan-"].text-white {
+  color: #fff !important;
+}
+
 .public-site .text-white\/90 {
   color: rgba(255, 255, 255, 0.92) !important;
 }

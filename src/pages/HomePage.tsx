@@ -11,52 +11,54 @@ const serviceCards = [
     tone: 'indigo',
     title: 'Modern Web & App Development',
     description:
-      'Lightning-fast web applications, headless commerce, and corporate platforms built on Next.js, TypeScript, and cloud-native frameworks engineered for conversions.',
-    bullets: ['Custom Web Apps & Headless CMS', 'Sub-second Core Web Vitals', 'High-conversion Funnel Engineering'],
+      'Websites and applications planned around user needs, content workflows, integrations, and maintainable delivery.',
+    bullets: ['Architecture selected for the project', 'Performance baselines and testing', 'Secure, documented integrations'],
+    href: '/solutions/web-development',
   },
   {
     icon: 'search',
     tone: 'cyan',
     title: 'Technical & Performance SEO',
     description:
-      'Dominate high-intent search terms through deep technical architecture, algorithmic content clustering, and high-authority institutional link building.',
-    bullets: ['Programmatic & Semantic SEO', 'Enterprise Technical Audits & Fixes', 'Revenue-driven Keyword Architecture'],
+      'Technical improvements and useful content planning to help the right audiences discover your products and services.',
+    bullets: ['Technical SEO audits', 'Intent-led page planning', 'Internal links and crawlability'],
+    href: '/solutions/seo',
   },
   {
     icon: 'target',
     tone: 'purple',
     title: 'Performance Digital Marketing',
     description:
-      'Precision paid acquisition across Google Ads, Meta, LinkedIn, and programmatic channels driven by real attribution modeling and ROAS milestones.',
-    bullets: ['Multi-Touch Attribution Modeling', 'Creative Testing & Iteration Cadence', 'Pipeline & CAC Optimization'],
+      'Focused campaigns across relevant channels, supported by clear conversion definitions and ongoing creative tests.',
+    bullets: ['Google, Meta, and LinkedIn campaigns', 'Consent-aware conversion measurement', 'Reporting tied to agreed outcomes'],
+    href: '/solutions/paid-media',
   },
   {
     icon: 'palette',
     tone: 'amber',
     title: 'Brand Identity & Positioning',
     description:
-      'Cut through market noise with commanding identity design, product packaging, high-converting product UI/UX design systems, and resonant copy.',
-    bullets: ['Brand Architecture & Style Guides', 'Figma Design Systems & Prototyping', 'High-Stakes Pitch Decks & Assets'],
+      'Clarify what makes your offer useful and express it consistently across your website and customer communications.',
+    bullets: ['Positioning and messaging', 'Visual identity and design systems', 'Website and campaign creative'],
   },
   {
     icon: 'speed',
     tone: 'rose',
     title: 'CRO & Conversion Funnels',
     description:
-      'Turn current traffic into profitable revenue through behavioral heatmap analysis, dynamic landing pages, and automated A/B split-testing.',
-    bullets: ['Heatmap & User Session Dissection', 'Multivariate Landing Page Testing', 'Frictionless Checkout Optimization'],
+      'Find friction in key journeys and improve the experience through research, accessibility review, and careful experimentation.',
+    bullets: ['Journey and usability reviews', 'Privacy-conscious behavior research', 'A/B tests where evidence supports them'],
+    href: '/solutions/cro',
   },
   {
     icon: 'memory',
     tone: 'emerald',
     title: 'AI Automation',
     description:
-      'Automate lead qualification, CRM synching, client onboarding, and automated email nurturing using modern AI integrations and webhooks.',
-    bullets: ['HubSpot, Salesforce & Klaviyo Workflows', 'Custom Lead Scoring Models', 'Automated Reporting Dashboards'],
+      'Identify repetitive tasks that are suitable for automation and connect the tools your team already uses.',
+    bullets: ['Workflow mapping', 'CRM and application integrations', 'Human review and exception handling'],
   },
 ];
-
-const trustBrands = ['NOVANET', 'HYPERION', 'SYNAPSE.AI', 'Aethelgard', 'VERTIGO.LABS'];
 
 const selectedClients = [
   {
@@ -79,70 +81,87 @@ const selectedClients = [
 const processSteps = [
   {
     number: '01',
-    title: 'Growth Audit & Blueprint',
-    copy: 'We dissect code quality, technical SEO vulnerabilities, and funnel friction to uncover revenue opportunities.',
+    title: 'Discovery & Baseline',
+    copy: 'Review the current experience, available data, audience, and constraints before recommending changes.',
   },
   {
     number: '02',
-    title: 'Intervention Design',
-    copy: 'We map the highest-conviction engineering and growth strategies tailored to your category and buying motion.',
+    title: 'Priorities & Scope',
+    copy: 'Agree on the work, responsibilities, success measures, and what is deliberately out of scope.',
   },
   {
     number: '03',
-    title: 'Execution Sprints',
-    copy: 'Our team ships pages, campaigns, landing experiences, and automation in tightly measured 30- to 60-day cycles.',
+    title: 'Implementation',
+    copy: 'Deliver the agreed changes in reviewable steps, coordinating content, design, development, and campaign work.',
   },
   {
     number: '04',
-    title: 'Optimization & Scale',
-    copy: 'We monitor attribution, conversion efficiency, and pipeline quality to compound what works and cut inefficiency.',
+    title: 'Review & Next Steps',
+    copy: 'Check the work against the agreed measures, share findings, and decide together what to improve next.',
   },
 ];
 
-const testimonials = [
+const progressPrinciples = [
   {
-    initials: 'MK',
-    name: 'Marcus Klein',
-    title: 'VP Marketing, Novanet Cloud',
-    quote:
-      'Scalex Factor isn’t just an agency; they operate like an internal growth engineering unit. They rebuilt our web platform and increased our conversion rate from 1.2% to 4.1% in under 90 days.',
+    icon: 'fact_check',
+    title: 'Start with a baseline',
+    description: 'Review the current site, analytics, search visibility, and conversion journey before recommending changes.',
   },
   {
-    initials: 'SR',
-    name: 'Sarah Reynolds',
-    title: 'Co-Founder, Synapse AI',
-    quote:
-      'Their SEO architecture alone added $2.4M in pipeline within two quarters. In a market where organic reach is tough, their technical rigor makes all the difference.',
+    icon: 'flag',
+    title: 'Agree on useful measures',
+    description: 'Choose indicators that reflect the project goal, such as qualified inquiries, task completion, or technical health.',
   },
   {
-    initials: 'DL',
-    name: 'David Lim',
-    title: 'Chief Executive, Hyperion Retail',
-    quote:
-      'Transparent reporting, sharp technical capability, and zero fluff. They took our ad creative and landing pages to an entirely new standard.',
+    icon: 'loop',
+    title: 'Share findings and iterate',
+    description: 'Document what changed, what the data shows, and what should be tested or improved next.',
+  },
+];
+
+const partnerQuestions = [
+  {
+    icon: 'integration_instructions',
+    title: 'Who owns implementation?',
+    description: 'Agree who is responsible for design, development, integrations, launch, and ongoing maintenance.',
+  },
+  {
+    icon: 'monitoring',
+    title: 'How will progress be measured?',
+    description: 'Set a baseline and define how technical health, qualified demand, and customer actions will be reported.',
+  },
+  {
+    icon: 'account_tree',
+    title: 'Do the channels work together?',
+    description: 'Make sure site structure, content, campaigns, and conversion paths support the same customer journey.',
+  },
+  {
+    icon: 'shield',
+    title: 'How is data handled?',
+    description: 'Discuss consent, access, retention, sensitive data, and the responsibilities of each platform involved.',
   },
 ];
 
 const faqItems = [
   {
-    question: 'How does Scalex Factor differ from a traditional digital marketing agency?',
+    question: 'What kind of work can Scalex Factor help with?',
     answer:
-      'Traditional agencies outsource development or separate SEO from creative and ad buying. Scalex Factor is a technology-first growth firm: our software engineers, data scientists, and growth strategists work in tandem to optimize the complete revenue funnel from first touch to checkout.',
+      'Our work includes website and application development, technical SEO, paid media, and conversion improvement. We can focus on one area or scope connected work around your goals and existing team.',
   },
   {
     question: 'What tech stack do you use for web development?',
     answer:
-      'We build modern, headless web apps primarily using Next.js, React, Tailwind CSS, TypeScript, and modern headless CMS platforms (Sanity, Strapi, Shopify Plus). This gives our clients instantaneous load speeds, superior SEO crawling, and total visual customization without bloated WordPress plugins.',
+      'The stack depends on the product, integrations, content workflow, hosting, and your team’s ability to maintain it. We work with modern JavaScript frameworks and TypeScript where they fit, and explain the trade-offs before implementation.',
   },
   {
-    question: 'How fast can we expect measurable SEO and lead results?',
+    question: 'How soon should we expect results?',
     answer:
-      'Paid campaigns and CRO modifications generate actionable data and revenue within 14–21 days of launch. For technical and semantic SEO, clients routinely observe ranking leaps in 60 to 90 days due to our high-velocity programmatic content approach.',
+      'Timing depends on the starting point, scope, competition, available data, and approval process. We agree on milestones and leading indicators for each engagement; search and campaign outcomes cannot be guaranteed to a fixed schedule.',
   },
   {
-    question: 'Are we tied into restrictive 12-month agency contracts?',
+    question: 'What happens when I submit the contact form?',
     answer:
-      'No. We operate primarily on 90-day growth sprints and rolling retainers. We believe retention is earned each month through ROI, transparency, and consistent execution.',
+      'The form opens WhatsApp with the details you entered so you can review and send the message. Nothing is submitted until you send it in WhatsApp.',
   },
 ];
 
@@ -167,7 +186,7 @@ function HomePage() {
       `Monthly budget: ${monthlyBudget}`,
       objective ? `Primary objective: ${objective}` : null,
     ].filter((detail): detail is string => detail !== null);
-    const message = `Hi, I'd like to request a growth audit.\n\n${details.join('\n')}`;
+    const message = `Hi, I'd like to discuss a digital growth project.\n\n${details.join('\n')}`;
 
     window.location.href = `${SITE.whatsappHref}?text=${encodeURIComponent(message)}`;
   };
@@ -192,9 +211,9 @@ function HomePage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-6 flex justify-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/80 px-3.5 py-1.5 text-xs font-medium text-slate-300 shadow-inner backdrop-blur-md">
-              <span className="h-2 w-2 animate-ping rounded-full bg-emerald-400" />
-              <span>Accepting 3 New Enterprise &amp; Scale-up Brands This Quarter</span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-white px-3.5 py-1.5 text-xs font-semibold text-indigo-800 shadow-sm">
+              <span className="h-2 w-2 rounded-full bg-emerald-500" />
+              <span>Strategy • Technology • Visibility • Growth</span>
             </div>
           </div>
 
@@ -204,7 +223,7 @@ function HomePage() {
               <span className="gradient-text">Predictable Digital Growth.</span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg font-normal leading-relaxed text-slate-400 sm:text-xl">
-              Scalex Factor combines custom software engineering, aggressive organic search architectures, and performance marketing to scale revenue sustainably.
+              Scalex Factor brings web development, technical SEO, digital marketing, and conversion improvement together around your business goals.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
@@ -212,7 +231,7 @@ function HomePage() {
                 href="#audit-form"
                 className="gradient-accent flex w-full items-center justify-center gap-2 rounded-xl px-8 py-4 text-sm font-bold tracking-wide text-white shadow-lg shadow-indigo-500/25 transition-all hover:scale-[1.02] hover:shadow-indigo-500/40 sm:w-auto"
               >
-                <span>Claim Free Growth Audit</span>
+                <span>Discuss Your Growth Goals</span>
                 <Icon name="arrow_upward" className="text-base" />
               </a>
               <a
@@ -234,69 +253,59 @@ function HomePage() {
             <div className="flex flex-wrap items-center justify-center gap-6 pt-8 text-xs text-slate-400">
               <div className="flex items-center gap-1.5">
                 <Icon name="check_circle" className="text-sm text-emerald-400" />
-                <span>No Locked-in Contracts</span>
+                <span>Scope agreed before work begins</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Icon name="check_circle" className="text-sm text-emerald-400" />
-                <span>Google &amp; Meta Premier Partners</span>
+                <span>Clear scope and priorities</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Icon name="check_circle" className="text-sm text-emerald-400" />
-                <span>Full-Stack Development In-House</span>
+                <span>Progress measured against agreed goals</span>
               </div>
             </div>
           </div>
 
           <div className="mx-auto mt-16 max-w-5xl">
-            <div className="rounded-2xl bg-gradient-to-b from-white/15 via-white/5 to-transparent p-1 shadow-2xl">
-              <div className="overflow-hidden rounded-[14px] border border-slate-800 bg-slate-950 p-4 sm:p-6">
-                <div className="mb-6 flex items-center justify-between border-b border-slate-800/80 pb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="h-3 w-3 rounded-full bg-rose-500/80" />
-                    <span className="h-3 w-3 rounded-full bg-amber-500/80" />
-                    <span className="h-3 w-3 rounded-full bg-emerald-500/80" />
-                    <span className="ml-2 font-mono text-xs text-slate-500">scalex-growth-intelligence-os.app</span>
+            <div className="glass-card rounded-3xl p-6 shadow-xl sm:p-10">
+              <div className="mb-8 max-w-2xl">
+                <span className="text-xs font-extrabold uppercase tracking-[0.3em] text-indigo-700">A connected growth system</span>
+                <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
+                  Every channel works better with a strong foundation.
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                  We connect the website experience, search visibility, acquisition, and conversion measurement—then prioritize improvements with your team.
+                </p>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  ['devices', 'Build', 'Fast, maintainable web experiences'],
+                  ['search', 'Be found', 'Useful content and technical SEO'],
+                  ['campaign', 'Reach', 'Relevant paid and organic campaigns'],
+                  ['query_stats', 'Improve', 'Measurement and ongoing testing'],
+                ].map(([icon, title, description]) => (
+                  <div key={title} className="rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:shadow-md">
+                    <Icon name={icon} className="text-2xl text-indigo-700" />
+                    <h3 className="mt-3 font-bold text-slate-900">{title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-600">{description}</p>
                   </div>
-                  <span className="rounded-md bg-emerald-500/10 px-2.5 py-1 font-mono text-xs font-medium text-emerald-400">
-                    Live Data Stream • 99.98% Attribution Sync
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-                  {[
-                    ['Attributed Pipeline', '$48.2M', ' +324% YoY'],
-                    ['Avg. Organic ROAS', '5.4x', ' +1.8x industry benchmark'],
-                    ['App Load Velocity', '0.42s', ' Core Web Vitals 100/100'],
-                    ['Customer Retention', '94.8%', ' Enterprise grade'],
-                  ].map(([label, value, trend]) => (
-                    <div key={label} className="rounded-xl border border-slate-800 bg-slate-900/90 p-4">
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-400">{label}</span>
-                      <p className="mt-1 text-2xl font-bold text-white">{value}</p>
-                      <span className="mt-1 flex items-center gap-1 text-xs text-emerald-400">
-                        <Icon name="trending_up" className="text-[13px]" />
-                        {trend}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-slate-800 bg-slate-900/50 py-12">
-        <div className="mx-auto max-w-7xl px-4 text-center">
-          <p className="mb-8 text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
-            Accelerating high-growth disruptors and enterprise leaders worldwide
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 opacity-70 grayscale transition duration-500 hover:grayscale-0 md:gap-16">
-            {trustBrands.map((brand) => (
-              <span key={brand} className="text-xl font-black tracking-tighter text-slate-300">
-                {brand}
-              </span>
-            ))}
-          </div>
+      <section className="border-y border-slate-200 bg-white py-8">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-3 px-4 text-sm font-semibold text-slate-600 sm:px-6 lg:px-8">
+          <span className="text-slate-500">One connected team across</span>
+          <span>Web &amp; app development</span>
+          <span className="text-indigo-300" aria-hidden="true">/</span>
+          <span>Technical SEO</span>
+          <span className="text-indigo-300" aria-hidden="true">/</span>
+          <span>Paid media</span>
+          <span className="text-indigo-300" aria-hidden="true">/</span>
+          <span>Conversion optimization</span>
         </div>
       </section>
 
@@ -305,10 +314,10 @@ function HomePage() {
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <span className="text-xs font-extrabold uppercase tracking-[0.35em] text-cyan-400">Integrated Growth Stack</span>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
-              Full-Funnel Capabilities. <br /> Zero Outsourcing Friction.
+              Practical capabilities. <br /> One connected growth plan.
             </h2>
             <p className="mt-4 text-base text-slate-400">
-              Growth is an interconnected discipline. We fuse modern engineering with aggressive user acquisition and distinct brand psychology.
+              Choose a focused service or combine disciplines around your goals, current platform, and available resources.
             </p>
           </div>
 
@@ -340,9 +349,40 @@ function HomePage() {
                       </li>
                     ))}
                   </ul>
+                  {service.href && (
+                    <Link
+                      to={service.href}
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-indigo-700 transition-colors hover:text-indigo-950"
+                    >
+                      Explore {service.title} <Icon name="arrow_forward" className="text-base transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  )}
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-slate-200 bg-white py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="text-xs font-extrabold uppercase tracking-[0.3em] text-indigo-700">Choosing a growth partner</span>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
+              Look beyond the channel list.
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-600">
+              Compare teams on how they deliver, measure, connect, and protect the work—not just on the tools or platforms they mention.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {partnerQuestions.map((item) => (
+              <article key={item.title} className="rounded-2xl border border-slate-200 bg-slate-50 p-6 transition duration-200 hover:-translate-y-1 hover:border-indigo-200 hover:bg-white hover:shadow-lg hover:shadow-slate-900/5">
+                <Icon name={item.icon} className="text-2xl text-indigo-700" />
+                <h3 className="mt-4 font-bold text-slate-900">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -353,9 +393,9 @@ function HomePage() {
       <section id="calculator" className="relative border-y border-slate-800 bg-slate-900 py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <div className="mb-10 text-center">
-            <span className="text-xs font-extrabold uppercase tracking-[0.35em] text-cyan-400">India Growth Forecaster</span>
-            <h2 className="mt-2 text-3xl font-extrabold text-white">Calculate Your Revenue Expansion Potential</h2>
-            <p className="mt-2 text-sm text-slate-400">Adjust your current traffic and target metrics to calculate monthly upside with Scalex Factor.</p>
+            <span className="text-xs font-extrabold uppercase tracking-[0.35em] text-cyan-400">Revenue Scenario Calculator</span>
+            <h2 className="mt-2 text-3xl font-extrabold text-white">Explore a Simple Revenue Scenario</h2>
+            <p className="mt-2 text-sm text-slate-400">Adjust the inputs to see an illustrative calculation. This is not a forecast of business results.</p>
           </div>
 
           <div className="rounded-3xl border border-slate-800 bg-slate-950 p-6 shadow-2xl sm:p-10">
@@ -379,7 +419,7 @@ function HomePage() {
 
                 <div>
                   <div className="mb-2 flex justify-between text-xs font-semibold">
-                    <span className="text-slate-300">Expected Conversion Rate</span>
+                    <span className="text-slate-300">Illustrative Conversion Rate</span>
                     <span className="font-mono text-cyan-400">{conversionRate.toFixed(1)}%</span>
                   </div>
                   <input
@@ -411,22 +451,22 @@ function HomePage() {
 
                 <div className="rounded-xl border border-slate-700/60 bg-slate-800/40 p-4 text-xs text-slate-400">
                   <Icon name="info" className="mr-1 inline text-[16px] text-cyan-400" />
-                  Assumes Scalex Factor’s median CRO uplift from <strong className="text-slate-300">1.5% to 3.8%</strong> over a 120-day sprint.
+                  This is an illustration based on your inputs, not a forecast or promise. Actual results vary by business and customer behavior.
                 </div>
               </div>
 
               <div className="overflow-hidden rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-900/30 to-cyan-600/10 p-8 text-center">
-                <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-slate-400">Estimated Additional Monthly Pipeline (INR)</span>
+                <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-slate-400">Illustrative Monthly Revenue (INR)</span>
                 <div className="mt-3 font-mono text-4xl font-black text-white sm:text-5xl">{formatCurrency(projectedRevenue)}</div>
                 <p className="mt-2 flex items-center justify-center gap-1 text-xs font-medium text-emerald-400">
                   <Icon name="check_circle" className="text-[14px]" />
-                  +153% conversion capacity
+                  Calculated from the values you selected
                 </p>
                 <a
                   href="#audit-form"
                   className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-indigo-500 to-cyan-400 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-md transition hover:opacity-95"
                 >
-                  Unlock This Growth Model
+                  Discuss Your Assumptions
                 </a>
               </div>
             </div>
@@ -469,8 +509,8 @@ function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-16 max-w-2xl text-center">
             <span className="text-xs font-extrabold uppercase tracking-[0.35em] text-cyan-400">Execution Framework</span>
-            <h2 className="mt-2 text-3xl font-extrabold text-white sm:text-5xl">How We Scale Your Factor</h2>
-            <p className="mt-3 text-sm text-slate-400">No guesswork. A structured methodology that delivers predictability at every milestone.</p>
+            <h2 className="mt-2 text-3xl font-extrabold text-white sm:text-5xl">A clear process, shaped around your team</h2>
+            <p className="mt-3 text-sm text-slate-400">We make decisions visible, agree on priorities, and adapt the plan as we learn.</p>
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
@@ -485,34 +525,23 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="py-24">
+      <section className="border-y border-slate-200 bg-white py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <span className="text-xs font-extrabold uppercase tracking-[0.35em] text-cyan-400">Client Endorsements</span>
-            <h2 className="mt-2 text-3xl font-extrabold text-white">What Founders &amp; CMOs Say</h2>
+            <span className="text-xs font-extrabold uppercase tracking-[0.35em] text-indigo-700">How we measure progress</span>
+            <h2 className="mt-2 text-3xl font-extrabold text-slate-950">Clear decisions, grounded in evidence</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-600">
+              We don’t promise a predetermined result. We agree on the problem, define meaningful measures, and share what we learn.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {testimonials.map((item) => (
-              <div key={item.name} className="glass-card flex flex-col justify-between rounded-2xl p-8">
-                <div className="space-y-4">
-                  <div className="flex gap-1 text-amber-400">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Icon key={star} name="star" className="text-[18px]" />
-                    ))}
-                  </div>
-                  <p className="text-sm italic text-slate-300">“{item.quote}”</p>
-                </div>
-                <div className="mt-6 flex items-center gap-3 border-t border-slate-800 pt-6">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-700 text-xs font-bold text-white">
-                    {item.initials}
-                  </div>
-                  <div>
-                    <h5 className="text-sm font-bold text-white">{item.name}</h5>
-                    <span className="text-xs text-slate-500">{item.title}</span>
-                  </div>
-                </div>
-              </div>
+            {progressPrinciples.map((principle) => (
+              <article key={principle.title} className="glass-card rounded-2xl p-8">
+                <Icon name={principle.icon} className="text-3xl text-indigo-700" />
+                <h3 className="mt-5 text-lg font-bold text-slate-900">{principle.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">{principle.description}</p>
+              </article>
             ))}
           </div>
         </div>
@@ -525,15 +554,15 @@ function HomePage() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
             <div className="space-y-6 lg:col-span-5">
               <div className="inline-flex items-center gap-2 rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
-                Zero Obligation • 48-Hour Turnaround
+                Start with a conversation
               </div>
-              <h2 className="text-3xl font-extrabold leading-tight text-white sm:text-4xl">Claim Your Free Custom Growth Audit</h2>
+              <h2 className="text-3xl font-extrabold leading-tight text-white sm:text-4xl">Tell Us What You’re Working to Improve</h2>
               <p className="text-sm leading-relaxed text-slate-400">
-                Our principal growth engineers will analyze your current platform, SEO rankings, and conversion gaps to give you a personalized 15-page breakdown.
+                Share your website, growth priorities, and current challenges. We’ll use that context to understand your needs and discuss appropriate next steps.
               </p>
 
               <div className="space-y-3 pt-2 text-xs text-slate-300">
-                {['Full Website Performance & Core Web Vitals Audit', 'Competitor Keyword Opportunity Matrix', 'Conversion Funnel Leakage Breakdown'].map((check) => (
+                {['Website and application development', 'Technical SEO and search visibility', 'Paid media and conversion improvement'].map((check) => (
                   <div key={check} className="flex items-start gap-3">
                     <Icon name="check_circle" className="mt-0.5 shrink-0 text-[16px] text-emerald-400" />
                     <span>{check}</span>
@@ -544,15 +573,15 @@ function HomePage() {
               <div className="flex items-center gap-3 rounded-xl border border-slate-800 bg-slate-950 p-4">
                 <Icon name="shield" className="h-8 w-8 shrink-0 text-cyan-400" />
                 <p className="text-[11px] text-slate-400">
-                  We protect your privacy. Your data will never be sold, and your metrics remain protected under strict NDA terms.
+                  Selecting submit opens WhatsApp with your details. Review the message there before sending; your details are not submitted until you send it.
                 </p>
               </div>
             </div>
 
             <div className="lg:col-span-7">
               <div className="rounded-2xl border border-slate-700/80 bg-slate-950 p-8 shadow-2xl sm:p-10">
-                <h3 className="mb-2 text-xl font-bold text-white">Request Your Growth Engine Audit</h3>
-                <p className="mb-6 text-xs text-slate-400">Fill in your brand details below to receive your actionable audit report.</p>
+                <h3 className="mb-2 text-xl font-bold text-white">Start a Project Conversation</h3>
+                <p className="mb-6 text-xs text-slate-400">Share a few details. You can review the message before it opens in WhatsApp.</p>
 
                 <form className="space-y-4" onSubmit={handleAuditSubmit}>
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -588,7 +617,7 @@ function HomePage() {
                   </div>
 
                   <button type="submit" className="gradient-accent flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4 text-sm font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-indigo-500/20 transition hover:opacity-95">
-                    <span>Request My Audit</span>
+                    <span>Continue in WhatsApp</span>
                     <Icon name="arrow_forward" className="text-[16px]" />
                   </button>
                 </form>

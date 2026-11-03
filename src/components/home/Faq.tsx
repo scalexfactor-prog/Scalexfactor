@@ -14,7 +14,7 @@ export function Faq() {
           </span>
           <h2 className="font-headline-lg text-headline-lg text-on-surface">Frequently Asked Questions</h2>
           <p className="font-body-md text-body-md text-on-surface-variant">
-            Everything you need to know about our engagement structure, Core Web Vitals guarantees, and timelines.
+            Learn about our approach to technical planning, delivery, and measurement.
           </p>
         </div>
         <div className="space-y-space-sm">

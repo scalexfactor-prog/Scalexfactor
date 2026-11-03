@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Icon } from '@/components/ui/Icon';
-import { NAV_ITEMS, SITE } from '@/data/site';
+import { NAV_ITEMS } from '@/data/site';
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,9 +12,9 @@ export function SiteHeader() {
     <div className="fixed left-0 right-0 top-0 z-50">
       <div className="bg-gradient-to-r from-indigo-700 via-indigo-600 to-cyan-500 text-center text-[11px] text-white sm:text-xs font-semibold py-2 px-4">
         <div className="mx-auto flex max-w-7xl items-center justify-center gap-2">
-          <span className="rounded-full bg-white/20 px-2 py-0.5 uppercase tracking-[0.2em] font-extrabold">Q4 Growth Sprint</span>
-          <span className="hidden sm:inline">Claim 1 of 5 free conversion &amp; SEO velocity audits</span>
-          <Link to="/#audit-form" className="underline font-bold hover:text-slate-200">Claim Now →</Link>
+          <span className="rounded-full bg-white/20 px-2 py-0.5 uppercase tracking-[0.2em] font-extrabold">Web • Search • Growth</span>
+          <span className="hidden sm:inline">Tell us what you’re working to improve</span>
+          <Link to="/#audit-form" className="underline font-bold hover:text-white">Start a conversation →</Link>
         </div>
       </div>
 

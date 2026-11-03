@@ -3,6 +3,7 @@ import { SiteLayout } from '@/components/layout/SiteLayout';
 import { AdminLayout } from '@/components/layout/AdminLayout';
 import HomePage from '@/pages/HomePage';
 import CaseStudiesPage from '@/pages/CaseStudiesPage';
+import SolutionPage from '@/pages/SolutionPage';
 import AdminPage from '@/pages/AdminPage';
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
       <Route element={<SiteLayout />}>
         <Route index element={<HomePage />} />
         <Route path="case-studies" element={<CaseStudiesPage />} />
+        <Route path="solutions/:slug" element={<SolutionPage />} />
       </Route>
       <Route path="admin" element={<AdminLayout />}>
         <Route index element={<AdminPage />} />

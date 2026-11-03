@@ -5,19 +5,19 @@ export interface FaqItem {
 
 export const FAQS: FaqItem[] = [
   {
-    "question": "What is the standard turnaround time for a complete web platform rebuild?",
-    "answer": "Most custom full-stack builds are delivered within 4 to 8 weeks through structured two-week sprints. High-velocity marketing sites and CRO overhauls can launch in as few as 21 days with continuous integration."
+    "question": "What kind of work can Scalex Factor help with?",
+    "answer": "Our work includes website and application development, technical SEO, paid media, and conversion improvement. We can focus on one area or scope connected work around your goals and existing team."
   },
   {
-    "question": "Do you contractually guarantee Core Web Vitals and Lighthouse scores?",
-    "answer": "Yes. Our standard engineering contracts stipulate a minimum 90+ Lighthouse benchmark across Performance, Accessibility, Best Practices, and SEO on standard mobile networks prior to client sign-off."
+    "question": "What tech stack do you use for web development?",
+    "answer": "The stack depends on the product, integrations, content workflow, hosting, and your team’s ability to maintain it. We work with modern JavaScript frameworks and TypeScript where they fit, and explain the trade-offs before implementation."
   },
   {
-    "question": "How do you handle post-launch website maintenance and security?",
-    "answer": "We provide dedicated High-Availability SLA maintenance packages including 24/7 server health tracking, daily cloud backups, weekly dependency patches, and guaranteed sub-hour emergency response times."
+    "question": "How soon should we expect results?",
+    "answer": "Timing depends on the starting point, scope, competition, available data, and approval process. We agree on milestones and leading indicators for each engagement; search and campaign outcomes cannot be guaranteed to a fixed schedule."
   },
   {
-    "question": "How do we track the direct commercial ROI of our SEO and ad campaigns?",
-    "answer": "We deploy a customized analytics dashboard linking your web conversion events directly into your CRM (HubSpot, Salesforce, or custom DB). You see clear multi-touch attribution connecting visitor clicks to booked revenue."
+    "question": "What happens when I submit the contact form?",
+    "answer": "The form opens WhatsApp with the details you entered so you can review and send the message. Nothing is submitted until you send it in WhatsApp."
   }
 ];

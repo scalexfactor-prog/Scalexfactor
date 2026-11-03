@@ -1,42 +1,66 @@
 import { Icon } from '@/components/ui/Icon';
+import { Link } from 'react-router-dom';
 
 export function Industries() {
+  const industries = [
+    {
+      icon: 'code',
+      title: 'B2B SaaS & Tech',
+      description: 'PLG onboarding, interactive calculators, developer documentation, and secure product experiences.',
+    },
+    {
+      icon: 'gavel',
+      title: 'Professional Services',
+      description: 'Trust-building websites and lead journeys for legal, accounting, and advisory firms.',
+    },
+    {
+      icon: 'health_and_safety',
+      title: 'Healthcare & Biotech',
+      description: 'Accessible digital experiences for healthcare teams, clinical research, and patient engagement.',
+    },
+    {
+      icon: 'local_shipping',
+      title: 'Logistics & Supply',
+      description: 'Freight portals, tracking dashboards, and digital tools that simplify complex operations.',
+    },
+    {
+      icon: 'storefront',
+      title: 'Modern Retail',
+      description: 'Fast commerce experiences with streamlined discovery, checkout, and customer journeys.',
+    },
+  ];
+
   return (
-    <section id="industries" className="w-full py-space-xl bg-surface">
-    <div className="max-w-7xl mx-auto px-margin space-y-space-lg">
-    <div className="max-w-2xl space-y-space-xs">
-    <span className="font-label-md text-label-md text-tertiary font-semibold uppercase tracking-wider">Tailored Domain Competency</span>
-    <h2 className="font-headline-lg text-headline-lg text-on-surface">Engineered for Strict Vertical Requirements</h2>
-    <p className="font-body-md text-body-md text-on-surface-variant">Every industry has distinct regulatory, technical, and conversion requirements. We build bespoke systems for your domain.</p>
-    </div>
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
-    <div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-xs hover:bg-surface-container-low transition-colors">
-    <Icon name="code" className="text-primary text-[28px]"/>
-    <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">B2B SaaS & Tech</h3>
-    <p className="font-body-sm text-body-sm text-on-surface-variant">PLG onboarding, interactive interactive calculators, SOC2 security compliance, and developer documentation hubs.</p>
-    </div>
-    <div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-xs hover:bg-surface-container-low transition-colors">
-    <Icon name="gavel" className="text-tertiary text-[28px]"/>
-    <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">Professional Services</h3>
-    <p className="font-body-sm text-body-sm text-on-surface-variant">Corporate law firms, accounting practices, and advisory desks demanding institutional trust and high privacy.</p>
-    </div>
-    <div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-xs hover:bg-surface-container-low transition-colors">
-    <Icon name="health_and_safety" className="text-primary text-[28px]"/>
-    <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">Healthcare & Biotech</h3>
-    <p className="font-body-sm text-body-sm text-on-surface-variant">HIPAA-governed telemedicine web applications, clinical trial recruitment, and encrypted patient portals.</p>
-    </div>
-    <div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-xs hover:bg-surface-container-low transition-colors">
-    <Icon name="local_shipping" className="text-tertiary text-[28px]"/>
-    <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">Logistics & Supply</h3>
-    <p className="font-body-sm text-body-sm text-on-surface-variant">Freight tracking dashboards, rate calculation tools, warehouse operations platforms, and national B2B SEO.</p>
-    </div>
-    <div className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-xs hover:bg-surface-container-low transition-colors">
-    <Icon name="storefront" className="text-primary text-[28px]"/>
-    <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">Modern Retail</h3>
-    <p className="font-body-sm text-body-sm text-on-surface-variant">High-volume transactional storefronts, cross-border payment rails, dynamic promotions, and instant search.</p>
-    </div>
-    </div>
-    </div>
+    <section id="industries" className="scroll-mt-32 border-y border-slate-800 bg-slate-900/50 py-20">
+      <div className="mx-auto max-w-7xl space-y-10 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl">
+          <span className="text-xs font-extrabold uppercase tracking-[0.3em] text-cyan-400">Tailored to your market</span>
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Solutions for complex industries</h2>
+          <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
+            Each market has distinct customer expectations and operational challenges. We shape digital experiences around the work your business needs to do.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {industries.map((industry, index) => (
+            <article key={industry.title} className="glass-card rounded-2xl p-6">
+              <Icon
+                name={industry.icon}
+                className={`text-[28px] ${index % 2 === 0 ? 'text-cyan-400' : 'text-indigo-400'}`}
+              />
+              <h3 className="mt-4 text-base font-bold text-white">{industry.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-400">{industry.description}</p>
+            </article>
+          ))}
+        </div>
+
+        <Link
+          to="/#audit-form"
+          className="inline-flex items-center gap-2 text-sm font-bold text-cyan-300 transition-colors hover:text-white"
+        >
+          Talk through your industry’s needs <Icon name="arrow_forward" className="text-base" />
+        </Link>
+      </div>
     </section>
   );
 }

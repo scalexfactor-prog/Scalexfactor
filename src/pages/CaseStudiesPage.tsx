@@ -1,4 +1,4 @@
-import { CasesBreadcrumb, CasesHero, CaseExplorer, TechStacks, LeaderQuotes, CasesCta } from '@/components/cases';
+import { CasesBreadcrumb, CasesHero, CaseExplorer, ServicesOverview, CasesCta } from '@/components/cases';
 
 export default function CaseStudiesPage() {
   return (
@@ -6,8 +6,7 @@ export default function CaseStudiesPage() {
       <CasesBreadcrumb />
       <CasesHero />
       <CaseExplorer />
-      <TechStacks />
-      <LeaderQuotes />
+      <ServicesOverview />
       <CasesCta />
     </div>
   );

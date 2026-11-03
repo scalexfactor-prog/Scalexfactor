@@ -1,6 +1,8 @@
 import { useMemo, useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '@/components/ui/Icon';
+import { Industries } from '@/components/home/Industries';
+import { WhyChoose } from '@/components/home/WhyChoose';
 import { SITE } from '@/data/site';
 
 const serviceCards = [
@@ -56,36 +58,16 @@ const serviceCards = [
 
 const trustBrands = ['NOVANET', 'HYPERION', 'SYNAPSE.AI', 'Aethelgard', 'VERTIGO.LABS'];
 
-const caseStudies = [
+const selectedClients = [
   {
-    tag: 'Next.js & Organic SEO',
-    title: 'From Page 4 to #1 for 38 Category Keywords',
-    impact: '+340%',
-    metric: 'Pipeline Impact',
-    value: '-58%',
-    label: 'Cost Per Lead',
-    description: 'Complete web rebuild and programmatic SEO overhaul resulting in record enterprise pipeline and Series-B valuation bump.',
-    theme: 'from-indigo-900 to-slate-900',
+    name: 'MyGetWellStore',
+    category: 'Healthcare E-Commerce',
+    description: 'An online healthcare and wellness store for medical equipment, health-monitoring devices, and home-care products.',
   },
   {
-    tag: 'Paid Acquisition & CRO',
-    title: 'Scaling from $80k to $650k Monthly Ad Spend at 4.6x ROAS',
-    impact: '$8.4M',
-    metric: 'Annual Revenue',
-    value: '4.62x',
-    label: 'Blended ROAS',
-    description: 'Dynamic headless Shopify checkout combined with rapid TikTok & Meta paid media creative testing sprints.',
-    theme: 'from-cyan-950 to-slate-900',
-  },
-  {
-    tag: 'Branding & Funnels',
-    title: 'Category Rebranding & Enterprise Demo Generation',
-    impact: '+210%',
-    metric: 'Sales Qualified Demos',
-    value: '-35 days',
-    label: 'Sales Cycle',
-    description: 'Positioning shift away from legacy clinical terminology to modern software-first enterprise branding.',
-    theme: 'from-violet-950 to-slate-900',
+    name: 'Bajaj Life Care',
+    category: 'Medical Equipment',
+    description: 'An Indian manufacturer and supplier of flow meters, medical oxygen cylinders, and anaesthesia equipment.',
   },
 ];
 
@@ -360,6 +342,9 @@ function HomePage() {
         </div>
       </section>
 
+      <Industries />
+      <WhyChoose />
+
       <section id="calculator" className="relative border-y border-slate-800 bg-slate-900 py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <div className="mb-10 text-center">
@@ -448,38 +433,28 @@ function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-16 flex flex-col justify-between md:flex-row md:items-end">
             <div>
-              <span className="text-xs font-extrabold uppercase tracking-[0.35em] text-cyan-400">Demonstrated Impact</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white sm:text-5xl">Real Performance Metrics</h2>
+              <span className="text-xs font-extrabold uppercase tracking-[0.35em] text-cyan-400">Selected Clients</span>
+              <h2 className="mt-2 text-3xl font-extrabold text-white sm:text-5xl">Client Work</h2>
             </div>
             <p className="mt-4 max-w-md text-sm text-slate-400 md:mt-0">
-              We don’t count vanity metrics. We measure qualified pipeline, organic dominance, customer lifetime value, and speed to close.
+              Explore our work across healthcare e-commerce and medical equipment, with technology, web development, SEO, and digital marketing.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {caseStudies.map((item) => (
-              <div key={item.title} className="glass-card overflow-hidden rounded-2xl">
-                <div className={`flex h-44 items-center justify-center overflow-hidden bg-gradient-to-tr ${item.theme}`}>
-                  <span className="relative z-10 text-2xl font-extrabold tracking-tighter text-white">{item.tag.includes('SEO') ? 'FinTech SaaS Cloud' : item.tag.includes('CRO') ? 'Omnichannel D2C' : 'B2B HealthTech'}</span>
-                </div>
-                <div className="p-6">
-                  <div className="mb-3 flex items-center gap-2">
-                    <span className="rounded bg-indigo-500/20 px-2.5 py-1 text-[11px] font-bold uppercase text-cyan-300">{item.tag}</span>
-                  </div>
-                  <h4 className="mb-2 text-lg font-bold text-white">{item.title}</h4>
-                  <div className="my-4 grid grid-cols-2 gap-4 border-y border-slate-800 py-4">
-                    <div>
-                      <span className="block text-xs text-slate-500">{item.metric}</span>
-                      <span className="text-xl font-bold text-emerald-400">{item.impact}</span>
-                    </div>
-                    <div>
-                      <span className="block text-xs text-slate-500">{item.label}</span>
-                      <span className="text-xl font-bold text-white">{item.value}</span>
-                    </div>
-                  </div>
-                  <p className="text-xs leading-relaxed text-slate-400">{item.description}</p>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {selectedClients.map((client) => (
+              <Link
+                key={client.name}
+                to="/case-studies"
+                className="glass-card rounded-2xl p-8 transition-colors hover:border-cyan-400/40"
+              >
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">{client.category}</span>
+                <h3 className="mt-3 text-2xl font-bold text-white">{client.name}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-400">{client.description}</p>
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-cyan-300">
+                  View website preview <Icon name="arrow_forward" className="text-base" />
+                </span>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,37 +1,61 @@
 
 
+import { Link } from 'react-router-dom';
+
 export function WhyChoose() {
+  const pillars = [
+    {
+      number: '01',
+      title: 'Engineering Precision',
+      description: 'Maintainable, modern code and thoughtful technical foundations built to support your next stage of growth.',
+    },
+    {
+      number: '02',
+      title: 'ROI Accountability',
+      description: 'Clear priorities tied to business outcomes, from qualified leads and conversion rates to acquisition costs.',
+    },
+    {
+      number: '03',
+      title: 'Full-Stack Execution',
+      description: 'Design, development, search, and marketing work together instead of being handed between disconnected teams.',
+    },
+    {
+      number: '04',
+      title: 'Direct Communication',
+      description: 'Work closely with the people delivering your project, with straightforward updates and clear ownership.',
+    },
+  ];
+
   return (
-    <section id="why-choose" className="w-full py-space-xl bg-surface-container-high/40">
-    <div className="max-w-7xl mx-auto px-margin space-y-space-xl">
-    <div className="max-w-2xl space-y-space-xs">
-    <span className="font-label-md text-label-md text-primary font-semibold uppercase tracking-wider">The Scalex Advantage</span>
-    <h2 className="font-headline-lg text-headline-lg text-on-surface">Four Pillars of Institutional Excellence</h2>
-    <p className="font-body-md text-body-md text-on-surface-variant">We reject freelance fragility and bloated agency overhead in favor of a disciplined, senior-led engineering framework.</p>
-    </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-    <div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-sm">
-    <div className="w-12 h-12 rounded-lg bg-primary-fixed text-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold">01</div>
-    <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">Engineering Precision</h3>
-    <p className="font-body-sm text-body-sm text-on-surface-variant">Clean, maintainable, TypeScript-first codebases with automated testing, containerized microservices, and uncompromising security standards.</p>
-    </div>
-    <div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-sm">
-    <div className="w-12 h-12 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center font-headline-sm text-headline-sm font-bold">02</div>
-    <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">ROI Accountability</h3>
-    <p className="font-body-sm text-body-sm text-on-surface-variant">Every sprint commitment is mapped directly to CAC reduction, organic search acquisition, or verified qualified sales opportunities.</p>
-    </div>
-    <div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-sm">
-    <div className="w-12 h-12 rounded-lg bg-tertiary-fixed text-tertiary flex items-center justify-center font-headline-sm text-headline-sm font-bold">03</div>
-    <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">Full-Stack Execution</h3>
-    <p className="font-body-sm text-body-sm text-on-surface-variant">A unified multidisciplinary squad covering UX design, frontend, cloud infrastructure, SEO algorithmics, and performance advertising.</p>
-    </div>
-    <div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-sm">
-    <div className="w-12 h-12 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center font-headline-sm text-headline-sm font-bold">04</div>
-    <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">Direct Communication</h3>
-    <p className="font-body-sm text-body-sm text-on-surface-variant">No middle managers or ticket queues. Direct Slack and WhatsApp bridge access with your dedicated tech leads and account directors.</p>
-    </div>
-    </div>
-    </div>
+    <section id="why-choose" className="scroll-mt-32 py-20">
+      <div className="mx-auto max-w-7xl space-y-10 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl">
+          <span className="text-xs font-extrabold uppercase tracking-[0.3em] text-cyan-400">About Scalex Factor</span>
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">A team built around measurable progress</h2>
+          <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
+            We bring strategy, technology, and growth execution together so businesses can move from disconnected efforts to a clear, measurable roadmap.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {pillars.map((pillar) => (
+            <article key={pillar.number} className="glass-card rounded-2xl p-6">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-500/15 text-sm font-extrabold text-cyan-300">
+                {pillar.number}
+              </span>
+              <h3 className="mt-5 text-lg font-bold text-white">{pillar.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-400">{pillar.description}</p>
+            </article>
+          ))}
+        </div>
+
+        <Link
+          to="/case-studies"
+          className="inline-flex items-center gap-2 text-sm font-bold text-cyan-300 transition-colors hover:text-white"
+        >
+          Explore our case studies <span aria-hidden="true">→</span>
+        </Link>
+      </div>
     </section>
   );
 }

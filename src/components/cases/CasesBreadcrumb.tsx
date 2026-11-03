@@ -11,11 +11,11 @@ export function CasesBreadcrumb() {
     <span>Home</span>
     </Link>
     <span className="text-outline-variant font-medium">/</span>
-    <span className="text-primary font-semibold">Portfolio &amp; Case Studies</span>
+    <span className="text-primary font-semibold">Client Case Studies</span>
     </nav>
     <div className="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
     <span className="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
-    <span>Verified Enterprise Impact</span>
+    <span>MyGetWellStore &amp; Bajaj Life Care</span>
     </div>
     </div>
     </div>

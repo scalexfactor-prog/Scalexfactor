@@ -185,7 +185,7 @@ function HomePage() {
     }).format(value);
 
   return (
-    <div className="w-full bg-[#070b11] text-slate-100">
+    <div className="w-full bg-slate-50 text-slate-900">
       <section className="relative overflow-hidden pb-28 pt-28 md:pb-36 md:pt-32">
         <div className="glow-gradient absolute left-1/2 top-1/4 h-[500px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full" />
         <div className="absolute -left-20 top-0 h-80 w-80 rounded-full bg-indigo-600/10 blur-3xl" />
@@ -637,7 +637,7 @@ function HomePage() {
               Let’s discuss your current bottlenecks and establish an engineered roadmap to category leadership.
             </p>
             <div className="mt-8 flex justify-center">
-              <a href="#audit-form" className="rounded-xl bg-slate-950 px-8 py-4 text-sm font-extrabold uppercase tracking-[0.2em] text-white transition hover:bg-black">
+              <a href="#audit-form" className="rounded-xl bg-white px-8 py-4 text-sm font-extrabold uppercase tracking-[0.2em] text-indigo-800 transition hover:bg-indigo-50">
                 Request Strategy Call
               </a>
             </div>

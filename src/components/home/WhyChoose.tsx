@@ -30,7 +30,7 @@ export function WhyChoose() {
     <section id="why-choose" className="scroll-mt-32 py-20">
       <div className="mx-auto max-w-7xl space-y-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <span className="text-xs font-extrabold uppercase tracking-[0.3em] text-cyan-400">About Scalex Factor</span>
+          <span className="text-xs font-extrabold uppercase tracking-[0.3em] text-indigo-700">About Scalex Factor</span>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">A team built around measurable progress</h2>
           <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
             We bring strategy, technology, and growth execution together so businesses can move from disconnected efforts to a clear, measurable roadmap.
@@ -40,7 +40,7 @@ export function WhyChoose() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {pillars.map((pillar) => (
             <article key={pillar.number} className="glass-card rounded-2xl p-6">
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-500/15 text-sm font-extrabold text-cyan-300">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-100 text-sm font-extrabold text-indigo-800">
                 {pillar.number}
               </span>
               <h3 className="mt-5 text-lg font-bold text-white">{pillar.title}</h3>
@@ -51,7 +51,7 @@ export function WhyChoose() {
 
         <Link
           to="/case-studies"
-          className="inline-flex items-center gap-2 text-sm font-bold text-cyan-300 transition-colors hover:text-white"
+          className="inline-flex items-center gap-2 text-sm font-bold text-indigo-700 transition-colors hover:text-indigo-900"
         >
           Explore our case studies <span aria-hidden="true">→</span>
         </Link>

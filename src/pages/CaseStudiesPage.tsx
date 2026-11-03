@@ -2,7 +2,7 @@ import { CasesBreadcrumb, CasesHero, CaseExplorer, ServicesOverview, CasesCta } 
 
 export default function CaseStudiesPage() {
   return (
-    <div className="flex w-full flex-col bg-[#070b11] text-slate-100">
+    <div className="flex w-full flex-col bg-slate-50 text-slate-900">
       <CasesBreadcrumb />
       <CasesHero />
       <CaseExplorer />

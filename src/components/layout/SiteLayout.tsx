@@ -5,13 +5,13 @@ import { ScrollManager } from './ScrollManager';
 
 export function SiteLayout() {
   return (
-    <>
+    <div className="public-site">
       <ScrollManager />
       <SiteHeader />
-      <main className="w-full bg-[#070b11] pt-20">
+      <main className="w-full pt-20">
         <Outlet />
       </main>
       <SiteFooter />
-    </>
+    </div>
   );
 }

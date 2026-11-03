@@ -34,7 +34,7 @@ export function Industries() {
     <section id="industries" className="scroll-mt-32 border-y border-slate-800 bg-slate-900/50 py-20">
       <div className="mx-auto max-w-7xl space-y-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <span className="text-xs font-extrabold uppercase tracking-[0.3em] text-cyan-400">Tailored to your market</span>
+          <span className="text-xs font-extrabold uppercase tracking-[0.3em] text-indigo-700">Tailored to your market</span>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Solutions for complex industries</h2>
           <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
             Each market has distinct customer expectations and operational challenges. We shape digital experiences around the work your business needs to do.
@@ -56,7 +56,7 @@ export function Industries() {
 
         <Link
           to="/#audit-form"
-          className="inline-flex items-center gap-2 text-sm font-bold text-cyan-300 transition-colors hover:text-white"
+          className="inline-flex items-center gap-2 text-sm font-bold text-indigo-700 transition-colors hover:text-indigo-900"
         >
           Talk through your industry’s needs <Icon name="arrow_forward" className="text-base" />
         </Link>

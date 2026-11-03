@@ -3,21 +3,21 @@ import { Link } from 'react-router-dom';
 
 export function CasesCta() {
   return (
-    <section className="w-full bg-inverse-surface text-inverse-on-surface py-space-xl">
+    <section className="w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-50 py-space-xl text-on-surface">
     <div className="max-w-7xl mx-auto px-margin flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-xl">
     <div className="space-y-space-sm max-w-2xl">
-    <span className="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-inverse-surface/80 text-tertiary-fixed font-label-sm text-label-sm font-semibold tracking-wide uppercase">
-    <span className="w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+    <span className="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-white text-primary font-label-sm text-label-sm font-semibold tracking-wide uppercase shadow-sm">
+    <span className="w-2 h-2 rounded-full bg-tertiary"></span>
               DIRECT ARCHITECT ACCESS
             </span>
-    <h2 className="font-headline-lg text-headline-lg text-inverse-on-surface tracking-tight">
+    <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">
               Have a Complex Project or High-Stakes Growth Goal?
             </h2>
-    <p className="font-body-md text-body-md text-inverse-on-surface/80">
+    <p className="font-body-md text-body-md text-on-surface-variant">
               Schedule a 30-minute technical roadmap consultation with our principal architects. We will audit your current architecture, identify digital bottlenecks, and present a custom sprint plan.
             </p>
-    <div className="flex items-center gap-space-xs text-inverse-on-surface/60 font-body-sm text-body-sm pt-1">
-    <Icon name="security" className="text-[18px] text-tertiary-fixed"/>
+    <div className="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm pt-1">
+    <Icon name="security" className="text-[18px] text-tertiary"/>
     <span>NDA upfront. Direct senior architect engagement. Zero junior handoffs.</span>
     </div>
     </div>

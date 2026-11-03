@@ -15,7 +15,7 @@ export function CasesBreadcrumb() {
     </nav>
     <div className="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
     <span className="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
-    <span>MyGetWellStore &amp; Bajaj Life Care</span>
+    <span>Featured Client Websites</span>
     </div>
     </div>
     </div>

@@ -1,4 +1,4 @@
-interface HealthcareCompanyProfileCardProps {
+interface ClientWebsiteCaseStudyCardProps {
   name: string;
   category: string;
   summary: string;
@@ -8,7 +8,7 @@ interface HealthcareCompanyProfileCardProps {
   websiteUrl: string;
 }
 
-function HealthcareCompanyProfileCard({
+function ClientWebsiteCaseStudyCard({
   name,
   category,
   summary,
@@ -16,7 +16,7 @@ function HealthcareCompanyProfileCard({
   services,
   website,
   websiteUrl,
-}: HealthcareCompanyProfileCardProps) {
+}: ClientWebsiteCaseStudyCardProps) {
   return (
     <article className="case-card grid grid-cols-1 gap-6 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm transition-shadow hover:shadow-md lg:grid-cols-12">
       <div className="flex flex-col justify-between gap-space-md lg:col-span-5">
@@ -93,9 +93,9 @@ function HealthcareCompanyProfileCard({
   );
 }
 
-export function MyGetWellStoreProfileCard() {
+export function MyGetWellStoreCaseStudyCard() {
   return (
-    <HealthcareCompanyProfileCard
+    <ClientWebsiteCaseStudyCard
       name="MyGetWellStore"
       category="Healthcare E-Commerce"
       summary="An online healthcare and wellness store serving customers across India with medical equipment, health-monitoring devices, mobility aids, and home-care products."
@@ -107,9 +107,9 @@ export function MyGetWellStoreProfileCard() {
   );
 }
 
-export function BajajLifeCareProfileCard() {
+export function BajajLifeCareCaseStudyCard() {
   return (
-    <HealthcareCompanyProfileCard
+    <ClientWebsiteCaseStudyCard
       name="Bajaj Life Care"
       category="Medical Equipment"
       summary="An India-based medical equipment manufacturer, exporter, and supplier established in 2002, with a focus on flow meters, medical oxygen cylinders, and anaesthesia equipment."
@@ -117,6 +117,20 @@ export function BajajLifeCareProfileCard() {
       services={['Technology & Web Development', 'SEO', 'Digital Marketing']}
       website="BajajLifeCare.com"
       websiteUrl="https://www.bajajlifecare.com/"
+    />
+  );
+}
+
+export function ScaleXFinanceCaseStudyCard() {
+  return (
+    <ClientWebsiteCaseStudyCard
+      name="ScaleX Finance"
+      category="Financial Services"
+      summary="A financial services platform that connects customers with banks and RBI-registered NBFCs to compare and apply for financial products. It also offers money-transfer tracking and financial advisory inquiries."
+      focusAreas={['Loan offer comparison', 'Bank & NBFC connections', 'Money-transfer tracking', 'Financial advisory']}
+      services={['Technology & Web Development', 'SEO', 'Digital Marketing']}
+      website="ScaleXFinance.com"
+      websiteUrl="https://scalexfinance.com/"
     />
   );
 }

@@ -69,6 +69,11 @@ const selectedClients = [
     category: 'Medical Equipment',
     description: 'An Indian manufacturer and supplier of flow meters, medical oxygen cylinders, and anaesthesia equipment.',
   },
+  {
+    name: 'ScaleX Finance',
+    category: 'Financial Services',
+    description: 'A financial services platform that connects customers with banks and RBI-registered NBFCs to compare and apply for financial products.',
+  },
 ];
 
 const processSteps = [
@@ -441,7 +446,7 @@ function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {selectedClients.map((client) => (
               <Link
                 key={client.name}

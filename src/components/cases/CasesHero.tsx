@@ -1,8 +1,8 @@
 import { Icon } from '@/components/ui/Icon';
 
 const highlights = [
-  { icon: 'web', label: 'Featured clients', value: '2 websites' },
-  { icon: 'medical_services', label: 'Industries', value: 'Healthcare & retail' },
+  { icon: 'web', label: 'Featured clients', value: '3 websites' },
+  { icon: 'business', label: 'Industries', value: 'Healthcare & finance' },
   { icon: 'code', label: 'Technology', value: 'Web development' },
   { icon: 'trending_up', label: 'Growth services', value: 'SEO & digital marketing' },
 ];
@@ -28,7 +28,7 @@ export function CasesHero() {
             Technology, Web Development &amp; Digital Growth
           </h1>
           <p className="max-w-3xl font-body-lg text-body-lg text-on-surface-variant">
-            Explore our work with MyGetWellStore and Bajaj Life Care, including technology and web development, SEO, and digital marketing.
+            Explore our work with MyGetWellStore, Bajaj Life Care, and ScaleX Finance, including technology and web development, SEO, and digital marketing.
           </p>
         </div>
 

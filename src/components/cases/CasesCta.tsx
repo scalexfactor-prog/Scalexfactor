@@ -25,9 +25,9 @@ export function CasesCta() {
     <Link to="/#contact" className="bg-primary-container text-on-primary px-space-lg py-space-sm rounded-lg font-label-md text-label-md hover:bg-primary transition-colors text-center font-semibold shadow-lg">
               Schedule Technical Consultation
             </Link>
-    <a className="bg-surface-container-lowest text-on-surface px-space-lg py-space-sm rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors text-center font-semibold flex items-center justify-center gap-2 shadow-lg" href="https://wa.me/917122000000" rel="noopener noreferrer" target="_blank">
+    <a className="bg-surface-container-lowest text-on-surface px-space-lg py-space-sm rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors text-center font-semibold flex items-center justify-center gap-2 shadow-lg" href="https://wa.me/918087885433" rel="noopener noreferrer" target="_blank">
     <Icon name="chat" className="text-tertiary text-[20px]"/>
-    <span>Discuss on WhatsApp (+91 712 200 0000)</span>
+    <span>Discuss on WhatsApp (+91 80878 85433)</span>
     </a>
     </div>
     </div>
